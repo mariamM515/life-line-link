@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="final.css">
+    <script>
+        function validateForm() {
+            let firstName = document.getElementById("first-name").value;
+            let lastName = document.getElementById("last-name").value;
+            let phone = document.getElementById("phone").value;
+            let address = document.getElementById("address").value;
+            let age = document.getElementById("age").value;
+            let reasons = document.getElementById("reasons").value;
+
+            if (!firstName || !lastName || !phone || !address || !age || !reasons) {
+                alert("All fields are required. Please fill in all the information.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="logo_page.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="internships.html">Internships</a></li>
+            <li><a href="choose_orphange.html">Orphanage</a></li>
+            <li><a href="adoption.html">Adoption</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Contactus.html">Contact us</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Application for Adoption</h1>
+        <form action="congrats.html" method="get" onsubmit="return validateForm()">
+            <h2>Personal Information</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name">
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name">
+
+            <label for="gender">Gender:</label>
+            <select name="Gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+
+            <label for="nationality">Nationality:</label>
+            <select name="nationality">
+                <option value="">Select</option>
+                <option value="Arab">Arab</option>
+                <option value="French">French</option>
+                <option value="British">British</option>
+                <option value="American">American</option>
+            </select>
+
+            <label for="relationship-status">Relationship Status:</label>
+            <select name="relationship-status">
+                <option value="">Select</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Separated">Separated</option>
+            </select>
+
+            <label for="reasons">Share your reasons for adoption:</label>
+            <input type="text" id="reasons" name="reasons">
+
+            <br><br>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

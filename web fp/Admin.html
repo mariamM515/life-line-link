@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Login page for secure access to the administrative panel.">
+    <meta name="keywords" content="Admin login, secure login, administrative access, admin panel">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="final.css">
+    <script>
+        function validate()
+         {
+            let userName = document.getElementById("userName").value();
+            let pass = document.getElementById("pass").value();
+
+            if (!userName || !pass)
+             {
+                alert("Please fill in both fields: Username and Password.");
+                return false; 
+            }
+
+            if (userName === "jana" && pass === "123") 
+            {
+                alert("Welcome, Jana!");
+                return true; 
+            } 
+            else 
+            {
+                alert("Incorrect Username or Password.");
+                return false; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="logo_page.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="internships.html">Internships</a></li>
+            <li><a href="choose_orphange.html">Orphanage</a></li>
+            <li><a href="adoption.html">Adoption</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="Contactus.html">Contact us</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Administrator Access</h1>
+        <form name="myForm" method="post" action="volunteersdata.html" onsubmit="return validate()">
+            <label for="userName">Username</label>
+            <input type="text" name="userName" id="userName" required>
+            <br><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
